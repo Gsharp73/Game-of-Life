@@ -1,5 +1,14 @@
 # Game of Life with C++ and OpenGL
 
+
+## Below are some visual examples of the Game of Life simulation in action:
+
+<div style="display: flex; justify-content: center; gap: 40px;">
+  <img src="gifs/UNICOLOR.gif" alt="Initial State" style="width: 300px; height: auto;">
+  <img src="gifs/colorful_GOL.gif" alt="Simulation Progress" style="width: 300px; height: auto;">
+</div>
+
+
 ## Overview
 
 This project implements Conway's Game of Life using C++ and OpenGL for visualization. Conway's Game of Life is a cellular automaton devised by mathematician John Conway. The game is played on a grid where cells can be either alive or dead, and their states evolve based on a set of rules.
@@ -40,16 +49,6 @@ Follow these steps to compile and run the simulation:
     ```bash
     ./game_of_life
     ```
-
-## Screenshots
-
-Below are some visual examples of the Game of Life simulation in action:
-
-<div style="display: flex; justify-content: center; gap: 40px;">
-  <img src="gifs/UNICOLOR.gif" alt="Initial State" style="width: 300px; height: auto;">
-  <img src="gifs/colorful_GOL.gif" alt="Simulation Progress" style="width: 300px; height: auto;">
-</div>
-
 
 
 
