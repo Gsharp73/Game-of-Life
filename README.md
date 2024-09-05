@@ -45,12 +45,6 @@ Follow these steps to compile and run the simulation:
 
 Below are some visual examples of the Game of Life simulation in action:
 
-### Initial State
-
-## Screenshots
-
-Below are some visual examples of the Game of Life simulation in action:
-
 <div style="display: flex; justify-content: center; gap: 40px;">
   <img src="gifs/UNICOLOR.gif" alt="Initial State" style="width: 300px; height: auto;">
   <img src="gifs/colorful_GOL.gif" alt="Simulation Progress" style="width: 300px; height: auto;">
