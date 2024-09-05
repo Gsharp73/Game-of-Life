@@ -5,8 +5,9 @@
 #include <vector>
 using namespace std;
 
-#define SIZE 140
-#define FPS 40    
+#define SIZE 100
+#define FPS 10    
+const bool COLORFUL = true;
 
 vector<vector<int>> curr(SIZE + 1, vector<int>(SIZE + 1, 0));
 vector<vector<int>> nxt(SIZE + 1, vector<int>(SIZE + 1, 0));
@@ -58,12 +59,30 @@ void square(int x, int y, char R, char G, char B) {
 }
 
 void draw() {
+    srand(time(0));
+    const int colors[7][3] = {
+        {128, 0, 128},
+        {75, 0, 130}, 
+        {0, 0, 255}, 
+        {0, 255, 0},
+        {255, 255, 0},
+        {255, 165, 0},
+        {255, 0, 0} 
+    };
+    
     for (int i = 0; i < SIZE; i++) {
         for (int j = 0; j < SIZE; j++) {
             if (nxt[i][j] == 1) {
-                square(i, j, 255, 255, 255); 
+                bool rando = COLORFUL;
+                if (rando) {
+                    int randColor = rand() % 7;
+                    square(i, j, colors[randColor][0], colors[randColor][1], colors[randColor][2]);
+                }
+                else {
+                    square(i, j, 0, 128, 0); 
+                }
             } else {
-                square(i, j, 0, 0, 0); 
+                square(i, j, 0, 0, 0);
             }
         }
     }
@@ -108,7 +127,7 @@ void initGrid() {
     srand(time(0));
     for (int i = 0; i < SIZE; i++) {
         for (int j = 0; j < SIZE; j++) {
-            curr[i][j] = (rand() % 10 == 0) ? 1 : 0;  
+            curr[i][j] = (rand() % 8 == 0) ? 1 : 0;  
         }
     }
 }
